@@ -67,7 +67,11 @@ class Cluster {
   }
   
   void draw() {
-    fill(0,0,255);
+    if (within(mouseX, mouseY)) {
+      fill(0,255,0);
+    } else {
+      fill(0,0,255);
+    }
     float size = 2*nextSquareRoot(c.size())*100/sqrt(2);
     ellipse(x,y,size,size);
     for (Circle cl : c) {

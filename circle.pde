@@ -14,7 +14,7 @@ class Circle {
   
   boolean moveToDest;
   float destX;
-  float destY;
+  float destY; 
   
   Circle(float _x, float _y) {
     x = _x;

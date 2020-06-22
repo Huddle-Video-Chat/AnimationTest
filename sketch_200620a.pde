@@ -28,6 +28,7 @@ void draw() {
   }
   
   if (grabbed != null) {
+    grabbed.show();
     grabbed.set(mouseX, mouseY);
   }
 }
