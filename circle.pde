@@ -2,7 +2,7 @@ class Circle {
   float x;
   float y;
   float r;
-  final float snapSize = 100;
+  
   final float startSnapSpeed = 0.1;
   float snapSpeed = 0.1;
   final float snapAcc = 1.2;
@@ -17,7 +17,8 @@ class Circle {
   float destY;
   
   Circle(float _x, float _y) {
-    set(x, y);
+    x = _x;
+    y = _y;
     r = 50;
     moveToDest = false;
   }
@@ -46,13 +47,6 @@ class Circle {
         snapSpeed = startSnapSpeed;
       }
     }
-  }
-  
-  void snap() {
-    setDestination(
-      round(x/snapSize)*snapSize, 
-      round(y/snapSize)*snapSize
-    );
   }
   
   void setDestination(float _x, float _y) { 
